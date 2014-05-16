@@ -11,7 +11,7 @@ Built with:
 - stylus
 - convict
 
-Install dependecies:
+Install dependecies (some might need to use `sudo` for various reasons):
 - `npm install -g gulp`
 - `npm install`
 
