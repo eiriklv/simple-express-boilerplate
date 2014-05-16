@@ -41,7 +41,6 @@ module.exports.configureExpress = function (options, app, config) {
 
 // register handlebars partials
 module.exports.registerPartials = function (path, handlebars) {
-    // Registering partials for handlebars templating
     var partials = path;
     fs.readdirSync(partials).forEach(function (folder) {
         var extension = folder.split('.')[1];

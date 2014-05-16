@@ -8,9 +8,10 @@ var socketio = require('socket.io');
 var app = express();
 
 // config and setup helpers
+var common = require('./common')();
 var config = require('./config');
 var setup = require('./setup');
-var helpers = require('./helpers')();
+var helpers = common.helpers;
 
 // setup application
 setup.registerPartials('./views/partials/', handlebars); // register handlebars partials
