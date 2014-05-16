@@ -10,10 +10,11 @@ var app = express();
 // config and setup helpers
 var config = require('./config');
 var setup = require('./setup');
+var helpers = require('./helpers')();
 
 // setup application
 setup.registerPartials('./views/partials/', handlebars); // register handlebars partials
-setup.registerHelpers('./helpers/handlebars/', handlebars); // register handlebars block helpers
+setup.registerHelpers(helpers.handlebars, handlebars); // register handlebars block helpers
 
 // configure express
 setup.configureExpress({
