@@ -21,7 +21,6 @@
     "colors": "0.6.x",
     "async": "0.2.x",
     "debug": "0.7.x",
-    "bcrypt": "0.7.x",
     "nib": "^0.1.0",
     "stylus": "^0.42.3",
     "convict": "0.4.2",
