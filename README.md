@@ -10,6 +10,11 @@ Express 4.x boilerplate
 - stylus
 - convict
 
-`sh dev.sh` to run the application
+Install dependecies:
+- `npm install -g gulp`
+- `npm install`
 
-navigate your browser to http://localhost:3000
+Run the application:
+- `sh dev.sh`
+
+navigate your browser to `http://localhost:3000` (or whatever port you chose in `dev.sh`)
