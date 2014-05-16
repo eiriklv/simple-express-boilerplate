@@ -42,7 +42,7 @@ gulp.task('lint', function () {
 
 // Watch Files For Changes
 gulp.task('watch', function (){
-    gulp.watch('client/javascript/*.js', ['scripts']);
+    gulp.watch('./client/javascript/*.js', ['scripts']);
     gulp.watch('./client/stylus/*.styl', ['stylus']);
     gulp.watch('./client/javascript/templates/*.handlebars', ['scripts', 'stylus']);
 });
