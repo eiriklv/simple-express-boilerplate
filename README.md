@@ -1,8 +1,9 @@
 Express 4.x boilerplate
 =======================
 
+Built with:
 - nodejs
-- expressjs
+- express
 - gulp
 - browserify
 - handlebars
