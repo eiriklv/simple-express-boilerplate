@@ -3,5 +3,5 @@ exports = module.exports = function (templates, api) {
         console.log(resources.length);
     });
 
-	$('#main').append(templates.common.spinner());
+    $('#main').append(templates.common.spinner());
 };
