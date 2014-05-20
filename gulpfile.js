@@ -6,7 +6,6 @@ var browserify = require('gulp-browserify');
 var hbsfy = require('hbsfy');
 var stylus = require('gulp-stylus');
 var nodemon = require('gulp-nodemon');
-var jshint = require('gulp-jshint');
 var nib = require('nib');
 
 // Basic usage
@@ -34,12 +33,6 @@ gulp.task('stylus', function () {
         .pipe(gulp.dest('./client/public/stylesheets'));
 });
 
-// js.lint
-gulp.task('lint', function () {
-    gulp.src('./**/*.js') // too many files
-    .pipe(jshint());
-});
-
 // Watch Files For Changes
 gulp.task('watch', function (){
     gulp.watch('./client/javascript/*.js', ['scripts']);
@@ -49,11 +42,11 @@ gulp.task('watch', function (){
 
 // Run server instance
 gulp.task('develop', function (){
-    nodemon({ script: 'app.js', ext: 'html js', ignore: ['client/public/**', 'node_modules/**'] })
-    .on('restart', function (){
-        console.log('restarted!');
-    });
+    nodemon({ script: 'app.js', ext: 'html js handlebars', ignore: ['client/public/**', 'node_modules/**'] })
+    .on('restart', ['update']);
 });
 
 // Default Task
 gulp.task('default', ['scripts', 'stylus', 'watch', 'develop']);
+
+gulp.task('update', ['scripts', 'stylus']);
