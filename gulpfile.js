@@ -1,14 +1,12 @@
-// Include gulp
+// dependencies
 var gulp = require('gulp');
-
-// Include Our Plugins
 var browserify = require('gulp-browserify');
 var hbsfy = require('hbsfy');
 var stylus = require('gulp-stylus');
 var nodemon = require('gulp-nodemon');
 var nib = require('nib');
 
-// Basic usage
+// compile client side js
 gulp.task('scripts', function (){
     // Single entry point to browserify
     gulp.src([
@@ -23,7 +21,7 @@ gulp.task('scripts', function (){
         .pipe(gulp.dest('client/public/javascript'));
 });
 
-// Get all .styl files in one folder and render
+// compile stylesheets
 gulp.task('stylus', function () {
     gulp.src('./client/stylus/*.styl')
         .pipe(stylus({
@@ -33,20 +31,11 @@ gulp.task('stylus', function () {
         .pipe(gulp.dest('./client/public/stylesheets'));
 });
 
-// Watch Files For Changes
-gulp.task('watch', function (){
-    gulp.watch('./client/javascript/*.js', ['scripts']);
-    gulp.watch('./client/stylus/*.styl', ['stylus']);
-    gulp.watch('./client/javascript/templates/*.handlebars', ['scripts', 'stylus']);
-});
-
-// Run server instance
+// run server instance while monitoring for change
 gulp.task('develop', function (){
     nodemon({ script: 'app.js', ext: 'html js handlebars', ignore: ['client/public/**', 'node_modules/**'] })
     .on('restart', ['update']);
 });
 
-// Default Task
-gulp.task('default', ['scripts', 'stylus', 'watch', 'develop']);
-
+gulp.task('default', ['scripts', 'stylus', 'develop']);
 gulp.task('update', ['scripts', 'stylus']);
