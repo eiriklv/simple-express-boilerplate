@@ -1,5 +1,5 @@
-exports = module.exports = function (routines) {
+exports = module.exports = function (services) {
     return {
-        resource: require('./resource')(routines.resource)
+        resource: require('./resource')(services.resource)
     };
 };

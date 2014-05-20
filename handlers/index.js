@@ -1,6 +1,6 @@
-exports = module.exports = function (routines) {
+exports = module.exports = function (services) {
     return {
-        app: require('./app')(routines),
-        api: require('./api')(routines)
+        app: require('./app')(services),
+        api: require('./api')(services)
     };
 };

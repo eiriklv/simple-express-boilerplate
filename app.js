@@ -31,8 +31,8 @@ var io = socketio.listen(server); // socket.io
 
 // app dependencies (app specific)
 var ipc = require('./modules/ipc')(0);
-var api = require('./api')();
-var handlers = require('./handlers')(api);
+var services = require('./services')();
+var handlers = require('./handlers')(services);
 
 // app specific modules
 require('./modules/sockets')(io, ipc);
