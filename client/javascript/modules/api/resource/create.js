@@ -10,5 +10,5 @@ exports = module.exports = function (request, path) {
 
                 callback(null, res.body);
             });
-    }
+    };
 };
