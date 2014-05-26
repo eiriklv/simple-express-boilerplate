@@ -11,15 +11,13 @@ var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
 var methodOverride = require('method-override');
 var errorHandler = require('errorhandler');
-var consolidate = require('consolidate');
 
 // configure express
 module.exports.configureExpress = function (options, app, config) {
     // set view engine and parsers
     app.set('views', options.dir + '/views');
     app.set('view engine', 'html');
-    app.set('view options', { layout: true });
-    app.engine('.html', consolidate.handlebars);
+    app.engine('.html', options.handlebars.__express);
 
     // json pretty response
     app.set('json spaces', 2);

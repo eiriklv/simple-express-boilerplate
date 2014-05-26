@@ -12,9 +12,9 @@
     "method-override": "~1.0.0",
     "consolidate": "0.10.x",
     "handlebars": "1.3.x",
+    "hbs": "2.6.0",
     "socket.io": "0.9.x",
     "browserify": "3.38.0",
-    "hbsfy": "1.3.2",
     "socket.io-browserify": "0.9.x",
     "qs": "0.6.x",
     "request": "2.34.x",
@@ -25,7 +25,8 @@
     "stylus": "^0.42.3",
     "convict": "0.4.2",
     "validator": "3.11.2",
-    "superagent": "0.18.0"
+    "superagent": "0.18.0",
+    "vinyl-source-stream": "0.1.1"
   },
   "engines": {
     "node": "0.10.x"
@@ -37,7 +38,8 @@
     "gulp-stylus": "^0.1.0",
     "gulp-browserify": "^0.5.0",
     "gulp-nodemon": "^1.0.2",
-    "gulp-jshint": "^1.5.0"
+    "gulp-jshint": "^1.5.0",
+    "hbsfy": "~1.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,4 @@
-exports = module.exports = function (app, handlers) {
-    require('./app')(app, handlers.app);
-    require('./api')(app, handlers.api);
+exports = module.exports = function (app, express, handlers) {
+    require('./app')(app, express, handlers.app, '/');
+    require('./api')(app, express, handlers.api, '/api/v1');
 };

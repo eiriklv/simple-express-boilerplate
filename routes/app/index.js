@@ -1,11 +1,14 @@
-exports = module.exports = function (app, handlers) {
-    app.route('/')
+exports = module.exports = function (app, express, handlers, path) {
+    var router = express();
+
+    router.route('/')
         .get(handlers.landing);
 
-    app.route('/page1')
+    router.route('/page1')
         .get(handlers.page1);
 
-    app.route('/page2')
+    router.route('/page2')
         .get(handlers.page2);
 
+    app.use(path, router);
 };

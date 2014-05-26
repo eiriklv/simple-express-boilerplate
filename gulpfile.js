@@ -5,10 +5,10 @@ var hbsfy = require('hbsfy');
 var stylus = require('gulp-stylus');
 var nodemon = require('gulp-nodemon');
 var nib = require('nib');
+var source = require('vinyl-source-stream');
 
-// compile client side js
-gulp.task('scripts', function (){
-    // Single entry point to browserify
+// browserify for client side js
+gulp.task('browserify', function (){
     gulp.src([
             './client/javascript/page1.js',
             './client/javascript/page2.js'
@@ -37,5 +37,5 @@ gulp.task('develop', function (){
     .on('restart', ['update']);
 });
 
-gulp.task('default', ['scripts', 'stylus', 'develop']);
-gulp.task('update', ['scripts', 'stylus']);
+gulp.task('default', ['browserify', 'stylus', 'develop']);
+gulp.task('update', ['browserify', 'stylus']);

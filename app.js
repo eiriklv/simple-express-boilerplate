@@ -3,7 +3,7 @@ var http = require('http');
 var express = require('express');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
-var handlebars = require('handlebars');
+var hbs = require('hbs');
 var socketio = require('socket.io');
 var app = express();
 
@@ -14,12 +14,13 @@ var setup = require('./setup');
 var helpers = common.helpers;
 
 // setup application
-setup.registerPartials('./views/partials/', handlebars); // register handlebars partials
-setup.registerHelpers(helpers.handlebars, handlebars); // register handlebars block helpers
+setup.registerPartials('./views/partials/', hbs); // register handlebars partials
+setup.registerHelpers(helpers.handlebars, hbs); // register handlebars block helpers
 
 // configure express
 setup.configureExpress({
     express: express,
+    handlebars: hbs,
     session: session,
     cookieParser: cookieParser,
     dir: __dirname
@@ -36,7 +37,7 @@ var handlers = require('./handlers')(services);
 
 // app specific modules
 require('./modules/sockets')(io, ipc);
-require('./routes')(app, handlers);
+require('./routes')(app, express, handlers);
 
 // run application
 setup.run(server, config);
