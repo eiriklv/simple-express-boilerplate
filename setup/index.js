@@ -68,7 +68,7 @@ module.exports.db = function (db, url) {
     db.connect(url);
 };
 
-// run application
+// run server
 module.exports.run = function (server, config) {
     server.listen(config.get('server.port'), function () {
         debug('listening on port %d'.green, server.address().port);
