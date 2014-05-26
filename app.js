@@ -13,11 +13,11 @@ var config = require('./config');
 var setup = require('./setup');
 var helpers = common.helpers;
 
-// setup application
+// setup handlebars
 setup.registerPartials('./views/partials/', hbs); // register handlebars partials
 setup.registerHelpers(helpers.handlebars, hbs); // register handlebars block helpers
 
-// configure express
+// setup express
 setup.configureExpress({
     express: express,
     handlebars: hbs,
@@ -30,14 +30,14 @@ setup.configureExpress({
 var server = http.createServer(app); // http
 var io = socketio.listen(server); // socket.io
 
-// app dependencies (app specific)
+// include app specific modules
 var ipc = require('./modules/ipc')(0);
 var services = require('./services')();
 var handlers = require('./handlers')(services);
 
-// app specific modules
+// initialize app
 require('./modules/sockets')(io, ipc);
 require('./routes')(app, express, handlers);
 
-// run application
+// run server
 setup.run(server, config);
