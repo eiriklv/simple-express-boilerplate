@@ -1,5 +1,5 @@
 // dependencies
-var io = require('socket.io-browserify');
+var io = require('socket.io-client');
 require('./modules/handlebars')(); // register handlebars helpers and partials
 
 // modules
