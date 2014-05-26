@@ -1,4 +1,4 @@
-var apiUrl = '/api/v1';
+var apiUrl = '/api';
 var request = require('superagent');
 
 exports = module.exports = function () {
