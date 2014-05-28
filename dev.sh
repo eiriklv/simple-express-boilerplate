@@ -6,7 +6,7 @@
 # APPSECRET                   Application session secret
 
 export PORT=3000 \
-export DEBUG='*' \
+export DEBUG='engine:polling' \
 export NODE_ENV='development' \
 export APPSECRET='somecrazyhash' \
 export API_URL="/api" \
