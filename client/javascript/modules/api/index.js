@@ -1,8 +1,7 @@
-var apiUrl = '/api';
 var request = require('superagent');
 
-exports = module.exports = function () {
+exports = module.exports = function (config) {
     return {
-        resource: require('./resource')(request, apiUrl+'/resource'),
+        resource: require('./resource')(request, config.api.url+'/resource'),
     };
 };

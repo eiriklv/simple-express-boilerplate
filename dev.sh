@@ -6,9 +6,10 @@
 # APPSECRET                   Application session secret
 
 export PORT=3000 \
-export DEBUG="*" \
-export NODE_ENV="development" \
-export APPSECRET="somecrazyhash" \
+export DEBUG='*' \
+export NODE_ENV='development' \
+export APPSECRET='somecrazyhash' \
+export API_URL="/api" \
 
 # Run process
 gulp
