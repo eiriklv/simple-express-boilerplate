@@ -4,9 +4,10 @@
 # DEBUG                       Debugging (* for all)
 # NODE_ENV                    Environment ('development', 'staging', 'production')
 # APPSECRET                   Application session secret
+# API_URL                     Client side API url
 
 export PORT=3000 \
-export DEBUG='application:socketio:*' \
+export DEBUG='*' \
 export NODE_ENV='development' \
 export APPSECRET='somecrazyhash' \
 export API_URL="/api" \
