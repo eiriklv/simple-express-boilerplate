@@ -8,11 +8,10 @@ exports = module.exports = function (io, ipc) {
             debug('socket.io initialized with: ' + data);
         });
 
-        socket.emit('init', 'initalize page 2');
-
-        // on disconnect
         socket.on('disconnect', function () {
             debug('global socket disconnected from namespace page2');
         });
+
+        socket.emit('init', 'initalize page 2');
     });
 };
