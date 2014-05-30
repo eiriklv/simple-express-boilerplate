@@ -2,7 +2,7 @@
 var io = require('socket.io-client');
 require('./modules/handlebars')(); // register handlebars helpers and partials
 
-// config
+// config (envify)
 var config = require('./config');
 
 // modules
