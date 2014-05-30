@@ -8,9 +8,9 @@ Express 4.x boilerplate
 - convict
 - bootstrap (+jquery)
 - handlebars
-- browserify (hbsfy, envify)
-  - hbsfy
-  - envify
+- browserify
+ - hbsfy
+ - envify
 - socket.io
 - stylus
 
