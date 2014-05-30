@@ -6,7 +6,7 @@
 # APPSECRET                   Application session secret
 
 export PORT=3000 \
-export DEBUG='engine:polling' \
+export DEBUG='application:socketio:*' \
 export NODE_ENV='development' \
 export APPSECRET='somecrazyhash' \
 export API_URL="/api" \

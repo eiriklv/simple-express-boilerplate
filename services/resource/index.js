@@ -1,8 +1,8 @@
-exports = module.exports = function () {
+exports = module.exports = function (resource) {
     return {
-        get: require('./get')(),
-        remove: require('./remove')(),
-        create: require('./create')(),
-        edit: require('./edit')()
+        get: require('./get')(resource),
+        remove: require('./remove')(resource),
+        create: require('./create')(resource),
+        edit: require('./edit')(resource)
     };
 };

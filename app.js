@@ -31,8 +31,9 @@ var server = http.createServer(app); // http
 var io = socketio.listen(server); // socket.io
 
 // include app specific modules
+var models = require('./models')();
 var ipc = require('./modules/ipc')(0);
-var services = require('./services')();
+var services = require('./services')(models);
 var handlers = require('./handlers')(services);
 
 // initialize app
