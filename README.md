@@ -14,10 +14,12 @@ Express 4.x boilerplate
 - socket.io
 - stylus
 
-### Install dependecies (some might need to use `sudo` for various reasons):
+### Install dependecies:
 - `npm install -g gulp`
 - `npm install`
+- some might need to use `sudo` for various reasons:
 
-### Run the application:
+### Run application:
+- configure your app by following the schema in `dev.sh`
 - `sh dev.sh`
 - navigate your browser to `http://localhost:3000` (or whatever port you chose in `dev.sh`)
