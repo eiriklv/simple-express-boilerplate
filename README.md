@@ -1,5 +1,5 @@
-Express 4.x boilerplate
-=======================
+Express 4.x application with the basics
+=======================================
 
 ### Built with:
 - nodejs
