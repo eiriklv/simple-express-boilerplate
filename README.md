@@ -17,7 +17,7 @@ Express 4.x application with the basics
 * [fontawesome](http://fortawesome.github.io/Font-Awesome/)
 * [jquery](http://www.jquery.com/)
 
-### Install dependecies (some might need to use `sudo` for various reasons):
+#### Install dependecies (some might need to use `sudo` for various reasons):
 - `npm install -g gulp`
 - `npm install`
 
@@ -33,6 +33,6 @@ Express 4.x application with the basics
 * `API_URL` - Path to the client REST api (relative)
  * example: `/api`
 
-### Run application:
+#### Run application:
 - `gulp`
 - navigate your browser to `http://localhost:3000`
