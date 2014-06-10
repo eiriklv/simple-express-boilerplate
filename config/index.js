@@ -38,6 +38,13 @@ var config = module.exports = convict({
             },
             default: 'somesillysecret',
             env: 'APPSECRET'
+        },
+        api: {
+            path: {
+                doc: 'The client api url path (relative)',
+                default: '/api',
+                env: 'API_PATH'
+            }
         }
     }
 });

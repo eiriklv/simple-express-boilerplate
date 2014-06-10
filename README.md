@@ -30,7 +30,7 @@ Express 4.x application with the basics
  * example: `development`
 * `APPSECRET` - Application session secret
  * example: `sOmeCrAzYhAsH894372`
-* `API_URL` - Path to the client REST api (relative)
+* `API_PATH` - Path to the client REST api (relative)
  * example: `/api`
 
 #### Run application:

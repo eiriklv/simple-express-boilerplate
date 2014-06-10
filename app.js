@@ -38,7 +38,7 @@ var handlers = require('./handlers')(services);
 
 // initialize app
 require('./modules/sockets')(io, ipc);
-require('./routes')(app, express, handlers);
+require('./routes')(app, express, handlers, config);
 
 // run server
 setup.run(server, config);
