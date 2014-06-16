@@ -14,8 +14,8 @@ var setup = require('./setup');
 var helpers = common.helpers;
 
 // setup handlebars
-setup.registerPartials('./views/partials/', hbs); // register handlebars partials
-setup.registerHelpers(helpers.handlebars, hbs); // register handlebars block helpers
+setup.registerPartials('./views/partials/', hbs);
+setup.registerHelpers(helpers.handlebars, hbs);
 
 // setup express
 setup.configureExpress({
@@ -27,8 +27,8 @@ setup.configureExpress({
 }, app, config);
 
 // http and socket.io server
-var server = http.createServer(app); // http
-var io = socketio.listen(server); // socket.io
+var server = http.createServer(app);
+var io = socketio.listen(server);
 
 // include app specific modules
 var models = require('./models')();
