@@ -32,7 +32,7 @@ var config = module.exports = convict({
             env: 'PORT'
         },
         secret: {
-            doc: 'The application secret (sessions).',
+            doc: 'The application secret (for sessions).',
             format: function (val) {
                 if (!validator.isLength(val, 10)) _throw(new Error('Application secret must be at least 10 characters'));
             },
@@ -41,7 +41,7 @@ var config = module.exports = convict({
         },
         api: {
             path: {
-                doc: 'The client api url path (relative)',
+                doc: 'The client API url path (relative to host).',
                 default: '/api',
                 env: 'API_PATH'
             }
@@ -49,6 +49,8 @@ var config = module.exports = convict({
     }
 });
 
-debug(util.inspect(process.env, { colors: true })); // print the environment for debugging
+// print the environment for debugging
+debug(util.inspect(process.env, { colors: true }));
 
-config.validate(); // validate the config
+// validate the config
+config.validate();
